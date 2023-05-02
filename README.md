@@ -34,9 +34,9 @@ RPA行业还在高速发展中，如果随着时间发展，本笔记可以在�
 
 本笔记在以下三个平台发布：
 
-* GitHub（中文）：
-* UiBot社区：
-* GitHub(English)：
+* GitHub（中文）：[https://github.com/HUHARED/rpa_project_management_notes/blob/main/README.md](https://github.com/HUHARED/rpa_project_management_notes/blob/main/README.md)
+* UiBot社区：[https://forum.laiye.com/thread-30110.htm](https://forum.laiye.com/thread-30110.htm)
+* GitHub(English)：[https://github.com/HUHARED/rpa_project_management_notes/blob/main/README_en.md](https://github.com/HUHARED/rpa_project_management_notes/blob/main/README_en.md)
 * UiPath Forum：
 
 在我认为值得分享的管理知识枯竭之前，计划本笔记每月至少更新2次，总字数2万+。
