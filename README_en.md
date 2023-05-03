@@ -37,7 +37,7 @@ The notes are published on the following platforms:
 * GitHub (Chinese):[https://github.com/HUHARED/rpa_project_management_notes/blob/main/README.md](https://github.com/HUHARED/rpa_project_management_notes/blob/main/README.md)
 * UiBot forum:[https://forum.laiye.com/thread-30110.htm](https://forum.laiye.com/thread-30110.htm)
 * GitHub (English):[https://github.com/HUHARED/rpa_project_management_notes/blob/main/README_en.md](https://github.com/HUHARED/rpa_project_management_notes/blob/main/README_en.md)
-* UiPath forum:
+* UiPath forum:[https://forum.uipath.com/t/my-rpa-project-management-notes/541120?u=huha](https://forum.uipath.com/t/my-rpa-project-management-notes/541120?u=huha)
 
 Before exhausting the management knowledge I think is worth sharing, I plan to update the notes at least twice a month, with a total word count of over 20,000 words.
 
