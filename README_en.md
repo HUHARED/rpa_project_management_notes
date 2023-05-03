@@ -1,4 +1,4 @@
-目录
+Catelog
 
 - [1. Proface](#1-proface)
 - [2. Basic Concepts](#2-basic-concepts)
@@ -34,9 +34,9 @@ The RPA business is still expanding rapidly, if the notes could make a small imp
 
 The notes are published on the following platforms:
 
-* GitHub (Chinese):
-* UiBot forum:
-* GitHub (English):
+* GitHub (Chinese):[https://github.com/HUHARED/rpa_project_management_notes/blob/main/README.md](https://github.com/HUHARED/rpa_project_management_notes/blob/main/README.md)
+* UiBot forum:[https://forum.laiye.com/thread-30110.htm](https://forum.laiye.com/thread-30110.htm)
+* GitHub (English):[https://github.com/HUHARED/rpa_project_management_notes/blob/main/README_en.md](https://github.com/HUHARED/rpa_project_management_notes/blob/main/README_en.md)
 * UiPath forum:
 
 Before exhausting the management knowledge I think is worth sharing, I plan to update the notes at least twice a month, with a total word count of over 20,000 words.
