@@ -697,7 +697,7 @@ Encoo内置基于Git的版本控制，但是每次提交都必须提交所有文
 
 如果读者无法正常访问Chrome应用商店，这是我个人从Chrome应用商店下载后导出的离线压缩包。
 
-![Adblock Plus.zip](image/README/Adblock Plus.zip)
+![Adblock Plus.zip](image/README/Adblock_Plus.zip)
 
 解压后按照以下步骤启用：
 
