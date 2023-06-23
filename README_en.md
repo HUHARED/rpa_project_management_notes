@@ -96,7 +96,9 @@ Dui to the limitations of my experiences, the explanations of these basic concep
 * Party A: The party that expresses their requirements and pays for the project during its duration.
 * Party B: The party that fulfills Party A's requirements and receives payment during the project's duration.
 
-# 3. Requirements Change Control (Demand Management)
+# 3. Requirements Management
+
+## 3.1. Requirements Change Control
 
 During the development of a project, we may encounter situations that the client creates or  changes some requirements. An efficient management process should allocate some attention and time to managing those changes of the client's requirements.
 
@@ -144,13 +146,16 @@ Now that we have known the importance of Requirements Change Control, we can imp
 
    1. For requirement changes that are still under discusstion, have been approved or have been denied, we should record them in documents to the extent possible. If conficts arise with the Client, these records can be serve as evidence for determining both sides' responsibilities.
    2. It's recommended to utilize online ducuments in instant communication software. They are easy for both sides to check, edit, and export as part of project delivery documents.
-   3. The format for requirement change documents can be referenced as follow:
+   3. The format for requirement change documents can be created by referencing the following template, or you can duplicate a copy from this online Tencent Ducument([【腾讯文档】XX项目-需求管理清单](https://docs.qq.com/sheet/DR2hDVWlNRlJoQWtB?tab=BB08J2)) to your own account:
 
 | Record Date | Category             | Workflow   | New Description | previous Description | Man-days Estimate | Proposer | Status    | Confirmer | Notes |
 | ----------- | -------------------- | ---------- | --------------- | -------------------- | ----------------- | -------- | --------- | --------- | ----- |
 | 20XX-XX-XX  | Requirement Addition | Workflow A |                 |                      |                   |          | Confirmed |           |       |
 | 20XX-XX-XX  | Requirement Change   | Workflow B |                 |                      |                   |          | Pending   |           |       |
 | 20XX-XX-XX  | Requirement Change   | Workflow B |                 |                      |                   |          | Denied    |           |       |
+
+![1685448747989](image/README/1685448747989.png)
+
 
 # 4. Risk Management (to be translated)
 
