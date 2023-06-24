@@ -4,13 +4,15 @@ Catelog
 - [2. Basic Concepts](#2-basic-concepts)
   - [2.1. The Typical Duration of RPA Projects](#21-the-typical-duration-of-rpa-projects)
   - [2.2. Explanation of Terms](#22-explanation-of-terms)
-- [3. Requirements Change Control (Demand Management)](#3-requirements-change-control-demand-management)
+- [3. Requirements Management](#3-requirements-management)
+  - [3.1. Requirements Change Control](#31-requirements-change-control)
+  - [3.2. Notes on Requirements Analysis](#32-notes-on-requirements-analysis)
 - [4. Risk Management (to be translated)](#4-risk-management-to-be-translated)
   - [4.1. Risk Identification (to be translated)](#41-risk-identification-to-be-translated)
   - [4.2. Risk Follow-up (to be translated)](#42-risk-follow-up-to-be-translated)
   - [4.3. Overview of Common Risks (to be updated)](#43-overview-of-common-risks-to-be-updated)
-- [5. Stakeholder Management (to be updated)](#5-stakeholder-management-to-be-updated)
-- [6. Program Design (to be updated)](#6-program-design-to-be-updated)
+- [5. Stakeholder Management (to be translated)](#5-stakeholder-management-to-be-translated)
+- [6. Program Design (to be translated)](#6-program-design-to-be-translated)
 - [7. License](#7-license)
 
 # 1. Proface
