@@ -156,6 +156,26 @@ Now that we have known the importance of Requirements Change Control, we can imp
 
 ![1685448747989](image/README/1685448747989.png)
 
+## 3.2. Notes on Requirements Analysis
+
+* We should thoroughly understand all business steps and confirm them with stakeholders
+  * The process of requirements analysis must include active participation from client staff members who are familiar with the business details.
+    During the requirements analysis phase, the Requirements Specialist in the RPA team should ducument the workflow charts and descriptions, and confirm them with the client, development engineers, and other stakeholders. Once these charts and description are determine to be clear, accurate, we can proceed the subsequent tasks.
+  * If the business process lacks established human procedures to reference, then the tasks of requirements analysis should be carried out collaboratively by the Requirements Specialist, the Client, the Program Designer, the Implementation Engineer.
+    They should analyze every step in detail ,particularly the uiser interface manipulation steps, which should be manually reviewd to avoid overlooking any important details, identify potential risk factors.
+    Given that **identifying issues earlier reduces the cost of resolving them**, this is particularly crucial when we lack established human procedures or past similar projects to reference.
+* We must ducument requiments files such as workflow charts, workflow descriptions
+  * On one hand, these files can be utilize for determining responsibility;
+  * On the other hand, they can serve as a reference for future similar projects.
+* Pay attention on key words related to the scope of requirements
+  * For instance, for words such as "all" or "whole", we must define the boundaries of time, quantity, etc.
+    For example, in data scraping requirements, if the client says they need "all" data from a webpage, we need to ask the client to clarify whether "all" means "all result on the current page", or "all result that can be viewed by flipping through the pages", and whether the date scaping should be done up to yesterday or some other specific date.
+* The format and storage method of input and output data should be clarified
+  * We need to determine the data format that the RPA process need to handle, and where these data are coming from (e.g. data rows from SQL query, Excel, Email, etc.)
+  * We alse need to determine the for that the RPA process will produce, and where these output data will be saved. (If the data if saved to folders, the rules for naming folders and files should be considered, including how to distinguish by data, account, etc.)
+* Consider the requirements of similar project thoroughly
+  * Past similar projects: During the requirements ayalysis phase, we should consider any requirements or issues that we encountered in past similar projects.
+  * Future similar projects: We should also contemplate whether the scope and targets of requirements could be changed, so that if the team is assigned to a similar project in the future, they can better utilize the learnings and achievements from the current project.
 
 # 4. Risk Management (to be translated)
 
@@ -165,9 +185,9 @@ Now that we have known the importance of Requirements Change Control, we can imp
 
 ## 4.3. Overview of Common Risks (to be updated)
 
-# 5. Stakeholder Management (to be updated)
+# 5. Stakeholder Management (to be translated)
 
-# 6. Program Design (to be updated)
+# 6. Program Design (to be translated)
 
 # 7. License
 
