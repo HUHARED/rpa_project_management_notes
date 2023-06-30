@@ -148,7 +148,7 @@ Now that we have known the importance of Requirements Change Control, we can imp
 
    1. For requirement changes that are still under discusstion, have been approved or have been denied, we should record them in documents to the extent possible. If conficts arise with the Client, these records can be serve as evidence for determining both sides' responsibilities.
    2. It's recommended to utilize online ducuments in instant communication software. They are easy for both sides to check, edit, and export as part of project delivery documents.
-   3. The format for requirement change documents can be created by referencing the following template, or you can duplicate a copy from this online Tencent Ducument([【腾讯文档】XX项目-需求管理清单](https://docs.qq.com/sheet/DR2hDVWlNRlJoQWtB?tab=BB08J2)) to your own account:
+   3. The format for requirement change documents can be created by referencing the following template, or you can duplicate a copy from this online Tencent Document([【腾讯文档】XX项目-需求管理清单](https://docs.qq.com/sheet/DR2hDVWlNRlJoQWtB?tab=BB08J2)) to your own account:
 
 | Record Date | Category             | Workflow   | New Description | previous Description | Man-days Estimate | Proposer | Status    | Confirmer | Notes |
 | ----------- | -------------------- | ---------- | --------------- | -------------------- | ----------------- | -------- | --------- | --------- | ----- |
@@ -179,11 +179,57 @@ Now that we have known the importance of Requirements Change Control, we can imp
   * Past similar projects: During the requirements ayalysis phase, we should consider any requirements or issues that we encountered in past similar projects.
   * Future similar projects: We should also contemplate whether the scope and targets of requirements could be changed, so that if the team is assigned to a similar project in the future, they can better utilize the learnings and achievements from the current project.
 
-# 4. Risk Management (to be translated)
+# 4. Risk Management
 
-## 4.1. Risk Identification (to be translated)
+## 4.1. Risk Identification
 
-## 4.2. Risk Follow-up (to be translated)
+Any issue that increases the possibility that the project's outcomes deviating from expectations should be considered as a risk.
+
+If we categorize risks, they can be recognized as technical risks (such as software  compatibility, implementation difficulty) and business risks (such as changes in business process or compliance requirements).
+
+The appropriate approach to dealing with risks involves early detection and formulating corresponding countermeasures. This is curcial because the later a probelm is discovered, the higher the cost of addressing it.
+
+For detecting risks early, formulating countermeasures and minimize rework and delay cause by risks, we can refer to the Risks Checklist. This allows us to understand the potential risks and countermeasures were encountered in similar projects and apply these learing to our current project.
+
+The Risks Checklist should be continuously updated and revised as different projects completed. It is recommended that the RPA team regularly reviews the processes of identifying and responsing risks, and then updates the Risks Checklist.
+
+The format for Risk Checklist can be created by refering the following template.
+
+| Update Date | Scenario      | Sub-Senario | Risks Should be Identify | Reference Projects | Reference Countermeasures | Editor |
+| ----------- | ------------- | ----------- | ------------------------ | ------------------ | ------------------------- | ------ |
+| 20XX-XX-XX  | Log in        |             |                          |                    |                           |        |
+| 20XX-XX-XX  | Log in        |             |                          |                    |                           |        |
+| 20XX-XX-XX  | Log in        |             |                          |                    |                           |        |
+| 20XX-XX-XX  | DataBase      |             |                          |                    |                           |        |
+| 20XX-XX-XX  | Communication |             |                          |                    |                           |        |
+
+During the project initiation phase, the Project Manager should engage with stakeholders, document the Risk Tracking Table by referencing the Risk Checklist, gathering stakeholders' opinions, etc. This will enable us to  systematically record and  tracking risks of the project.
+
+Risk countermeasures usually include the following approaches:
+
+* Avoid: Alter the project's plan to make the risk impossible to occur.
+* Reduce: Implement countermeasures to reduce the impact of risks, or decrease its likelihood of occurring.
+* Transfer: Shift risks to others, such as through insurance or subcontracting.
+* Accept: Deliberately acknowledge the potential of risks to occur and prepare accordingly.
+
+Once risk countermeasures are established, the Project Manager must assign each countermeasure to a responsible individual to oversee and manage it, These countermeasures should be adjusted as necessary to align the project's actual progress.
+
+The format for Risk Tracing Table can be established by referencing the following table:
+
+| Create Date | Update Date | Whether to Close | Risk Description | Risk Effect | Countermeasure | Responsible Individual |
+| ----------- | ----------- | ---------------- | ---------------- | ----------- | -------------- | ---------------------- |
+| 20XX-XX-XX  | 20XX-XX-XX  | Closed           |                  |             |                |                        |
+| 20XX-XX-XX  | 20XX-XX-XX  | Not losed        |                  |             |                |                        |
+
+Alernatively, you can copy the online Tencent Document ([【腾讯文档】XX项目-风险跟踪表](https://docs.qq.com/sheet/DR1lBckFNc0VBd3VY?tab=BB08J2)) to your own account.
+
+## 4.2. Risk Follow-up
+
+Throughout the whole duration of the project, We should consistently minitor the progress of risks identification and tracking.
+
+The program Manager can regularly update risk management information and notify team members promptly through meetings, reports, etc. They should also continuously identify new risks and add them to the Risk Tracking Table.
+
+Once the project is delivered, it is important to review and summarize experience from the project's risk management process, and update the Risk Checklist with any new countermeasures that could potentially be useful in future similar projects.
 
 ## 4.3. Overview of Common Risks (to be updated)
 
