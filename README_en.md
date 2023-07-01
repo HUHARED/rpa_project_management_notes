@@ -233,7 +233,32 @@ Once the project is delivered, it is important to review and summarize experienc
 
 ## 4.3. Overview of Common Risks (to be updated)
 
-# 5. Stakeholder Management (to be translated)
+# 5. Stakeholder Management
+
+When a project involves at least 5 individuals (for example, the minimum could be a team comprising of a  Party A Leader, a Party A Business Staff, our Salesperson and our RPA Developer), the significance of creating a Stakeholder List increases with the number of individuals involved in the project.
+
+A Stakeholder List is particularly useful for individuals who are assigned to a project midway:
+
+* It helps familiarize with each individual's name or title
+* It helps clarify each individual's roles and responsibilities.
+* It provides contact information (phone number, email, etc.)
+* It records certain stakeholders' character traits, effective communication styles and potential  communication pitfalls
+  * For Instance, some Party A Leaders may become upset when a developer says, "It's impossible, It's not my job". if we aim to continue woring with them, these potential areas of conflict must be avoid.
+
+To generate a Stakeholder List, you can refer to the following Table:
+
+| Stakeholder Category  | Name or Title | Roles | Contacts | Notes |
+| --------------------- | ------------- | ----- | -------- | ----- |
+| Client Leader         |               |       |          |       |
+| Client Business Staff |               |       |          |       |
+| Client IT            |               |       |          |       |
+| Partner Leader        |               |       |          |       |
+| Partner IT            |               |       |          |       |
+| Internal Team Leader  |               |       |          |       |
+| Internal Team Member  |               |       |          |       |
+| Internal Team Manager |               |       |          |       |
+
+Alternatively, you can copy the online Tencent Document ([【腾讯文档】XX项目-干系人登记表](https://docs.qq.com/sheet/DR0JHR1BodnlJY1Nx?tab=BB08J2)) to your own account.
 
 # 6. Program Design (to be translated)
 
