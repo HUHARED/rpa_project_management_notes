@@ -7,12 +7,14 @@ Catelog
 - [3. Requirements Management](#3-requirements-management)
   - [3.1. Requirements Change Control](#31-requirements-change-control)
   - [3.2. Notes on Requirements Analysis](#32-notes-on-requirements-analysis)
-- [4. Risk Management (to be translated)](#4-risk-management-to-be-translated)
-  - [4.1. Risk Identification (to be translated)](#41-risk-identification-to-be-translated)
-  - [4.2. Risk Follow-up (to be translated)](#42-risk-follow-up-to-be-translated)
+- [4. Risk Management](#4-risk-management)
+  - [4.1. Risk Identification](#41-risk-identification)
+  - [4.2. Risk Follow-up](#42-risk-follow-up)
   - [4.3. Overview of Common Risks (to be updated)](#43-overview-of-common-risks-to-be-updated)
-- [5. Stakeholder Management (to be translated)](#5-stakeholder-management-to-be-translated)
-- [6. Program Design (to be translated)](#6-program-design-to-be-translated)
+- [5. Stakeholder Management](#5-stakeholder-management)
+- [6. Program Design](#6-program-design)
+  - [6.1. Flow Chart](#61-flow-chart)
+  - [6.2. Naming Rules](#62-naming-rules)
 - [7. License](#7-license)
 
 # 1. Proface
@@ -260,8 +262,19 @@ To generate a Stakeholder List, you can refer to the following Table:
 
 Alternatively, you can copy the online Tencent Document ([【腾讯文档】XX项目-干系人登记表](https://docs.qq.com/sheet/DR0JHR1BodnlJY1Nx?tab=BB08J2)) to your own account.
 
-# 6. Program Design (to be translated)
+# 6. Program Design
 
-# 7. License
+## 6.1. Flow Chart
 
-[MIT License](./LICENSE "开源许可证")
+It's recommended to generate flow charts after requirements have been defined and before the program design phase, unless the new project serves only as a temporary tool for personal use.
+
+Flow charts can be either detailed or high-level, and there are numerous software and websites to choose (such as Microsoft Visio, Draw.io, EdrawMax, ProcessOn), or even hand-drawing can be an option. The key is to choose a method that is convenient for sharing and understanding.
+
+The importance of generating flow charts prior to program implementation includes:
+
+* Clarify requirements: Flow charts can aid in understanding the requirements more deeply and in identifying unclear requirements or risks by outlining all steps of the expected process.
+* Help others understand the program procedure: Flow charts can often facilitate faster comprehension of out intentions than text and verbal explanations alone.
+* Serve as written documentations of a project:
+  * Upon delivery of the program, if it needs to handed over to other  engineers, having flow charts detailing the program's framework and each module's logic can help those engineers understand the procedure more quickly and can reduce maintenance costs.
+  * Many teams on the vendor side specialize in specific business areas, such as E-commerce, Logistics, Finance, etc. Different projects within these areas often have many common aspects. Flow charts can help in capturing these commonalities and in reusing knowledge across projects.
+    # 7. License
