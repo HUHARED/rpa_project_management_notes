@@ -277,4 +277,74 @@ The importance of generating flow charts prior to program implementation include
 * Serve as written documentations of a project:
   * Upon delivery of the program, if it needs to handed over to other  engineers, having flow charts detailing the program's framework and each module's logic can help those engineers understand the procedure more quickly and can reduce maintenance costs.
   * Many teams on the vendor side specialize in specific business areas, such as E-commerce, Logistics, Finance, etc. Different projects within these areas often have many common aspects. Flow charts can help in capturing these commonalities and in reusing knowledge across projects.
-    # 7. License
+
+## 6.2. Naming Rules
+
+Before discussing which naming rule best suits to an RPA program, we should learn about the different ways various coding languages handle variable types, including dynamic vs. static and strong vs. weak.
+
+Please reference the Zhihu answer: [弱类型、强类型、动态类型、静态类型语言的区别是什么-哥舒夜带刀的回答](https://www.zhihu.com/question/19918532/answer/1090175567)
+
+It's important to note that it's not a strict technical definition and its meanings can often be interchanged or misunderstand in different contexts. It's okay if you find them difficult to understand. Furthermore, even if a coding language was categorized as a type, it doesn't mean that it embodies all characteristics of that typy.
+
+![1685451865817](image/README/1685451865817.png)
+
+Image source: [Should Your Start Up Go Static or Dynamic?](https://dustyprogrammer-blog.tumblr.com/post/16746798643/should-your-start-up-go-static-or-dynamic)
+
+Then, let's learn some common naming conventions:
+
+* camelCase: This convention doesn't use spaces between words, and distinguishes words by capitalizing the first letter of each word.
+  It can be divided into two categories: UpperCamelCase (also known as PascalCase) and lowerCamelCase, where the first letter of the entire identifier in lowerCamelCase is lowercase.
+* PascalCase: In this convention, the first letter of every word, including the first one, is capitalized.
+* snake_case: Words are linked by underscore(_).
+* kabab-case: Words are linked by hyphen(-).
+
+Some good naming habits:
+
+* When we name an argument, the argument's name should reflect the data transfer (If you're not clear about the difference between a variable and an argument, you can think of an argument as a variable that is passed into a function (or a .xaml file) or returned by a function.)
+  Maintaining this habit aids in code inspection.
+  In UiPath and Encoo, there are three directions of data transfer, it's recommended to indicate these prefixes in argument identifier:
+  * in: This prefix indicates that the argument is passed into the .xaml file.
+  * out: This prefix signifies that the argument is returned from the .xaml file.
+  * io: This prefix expresses that the argument is passed into the .xaml file and then returned from the same .xaml file.
+* Use a meaningful identifier: When we generate a variable (or an argument), RPA software will assign a default name automatically, such as *result, text, sRet, object, item*, etc. These default names are too vague to immediately understand. If we need to explain the code to others, or revisit our code several months later, these default name do not facilitate quick comprehension of the variable's role.
+  Therefore, we should assign clear, meaningful names to our variables and arguments, such as *studentName, totalSalary.*
+* Reflect the type of variables or arguments: RPA software that are based on VB, C# have strict rules for  binding type with variables (or arguments). To quickly understand program and reduce type conflict errors, it's recommended to include texts that reflect the variable's (or argument's) type in the identifier, such as:
+  * String type
+    * strWebText
+    * strName
+  * Int type
+    * intTotalCount
+  * Dictionary type
+    * dictConfig
+  * Boolean type
+    * bExists
+    * isAvailable
+    * hasPaid
+    * canExecute
+
+Some poor naming practices we should avoid:
+
+* Refrain from using reserved keywords: Such Int, Double, String, etc.
+* Steer clear of special characters: Although many RPA tools is support the use of UTF-8 characters in identifiers, to avoid compatibility issues, it's advisable to only use ASCII characters and numbers.
+
+To a large extent, UiBot is developed in Python, and UiPath, Encoo are developed in C# (or VB). Therefore, when we using different RPA tools, we can choose a naming conversion based on the characteristics of Python and C#.
+
+Here are my naming conversions for reference:
+
+* UiBot
+  * variables: camelCase
+  * arguments: directions(g/in/out) + camelCase
+  * functions: snack_case
+  * blocks: PascalCase
+* UiPath/Encoo
+  * variables: camelCase(with type)
+  * arguments: direction (in/out/io) + camelCase(with type)
+  * functions(.xaml): snack_case
+  * folders: PascalCase
+
+If an RPA program needs to retrieve data from a client's internal system via some APIs provided by the client's IT departments, we should early define the API name and argument rules with the client's IT teams and document them. This will help prevent conflicts in naming conventions during the development phase.
+
+
+# 7. License
+
+[MIT License](./LICENSE "开源许可证")
