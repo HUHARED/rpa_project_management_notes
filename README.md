@@ -323,14 +323,14 @@ RPA行业还在高速发展中，如果随着时间发展，本笔记可以在�
 
 * 在命名参数时，体现参数的传递方向（如果读者对参数和变量的区别不清楚，那么可以简单的理解「传给函数、函数返回的变量，就是参数」）。
   在UiPath、Encoo中保持这种命名习惯会有利于检查代码。
-  UiPath、Encoo中的参数传递方向有3种，推荐在变量开头使用这几种文本：
+  UiPath、Encoo中的参数传递方向有3种，推荐在参数开头使用这几种文本：
 
   * in：表示这个参数是调用xaml文件时传入的。
   * out：表示这个参数是xaml文件运行完成时传出的。
   * io：表示这个文件被传入后又被传出。
-* 使用有意义的名字：当我们创建变量时，RPA软件会给出「result、text、sRet、object/item」等名称，这些名称的含义过于宽泛了，如果我们将代码给别人解释，或者自己过几个月需要调整自己的代码，那么这种名称就不利于快速理解变量的作用。
+* 使用有意义的名字：当我们创建变量时，RPA软件会给出「result、text、sRet、object、item」等名称，这些名称的含义过于宽泛了，如果我们将代码给别人解释，或者自己过几个月需要调整自己的代码，那么这种名称就不利于快速理解变量的作用。
   应当给变量 / 参数一个有清晰含义的名称，比如：学生姓名、总薪资、studentName、totalSalary。
-* 在命名中提现变量 / 参数的类型：对于UiPath、Encoo这种基于VB / C#，对变量类型绑定有严格限制的RPA软件，建议在命名中包含提现类型的文本，有助于理解程序、减少类型冲突错误（而UiBot对更改变量类型绑定无限制，所以本条命名习惯的重要性不高），比如：
+* 在命名中提现变量 / 参数的类型：对于UiPath、Encoo这种基于VB / C#，对变量类型绑定有严格限制的RPA软件，建议在命名中包含体现类型的文本，有助于理解程序、减少类型冲突错误（而UiBot对更改变量类型绑定无限制，所以本条命名习惯的重要性不高），比如：
 
   * 字符串类型
 
@@ -365,15 +365,15 @@ UiBot很大程度上是基于Python二次开发的，UiPath、Encoo很大程度�
 在这里给出我个人的命名习惯供读者参考：
 
 * UiBot
-  * variables: lowerCamelCase
-  * arguments: direction(g/in/out)+lowCamelCase
+  * variables: camelCase
+  * arguments: directions(g/in/out) + camelCase
   * functions: snack_case
-  * blocks: UpperCamelCase
+  * blocks: PascalCase
 * UiPath/Encoo
-  * variables: lowerCamelCase(withType)
-  * arguments: direction(in/out/io)+lowCamelCase(withType)
-  * functions: snack_case
-  * folders: UpperCamelCase
+  * variables: camelCase(with type)
+  * arguments: direction (in/out/io) + camelCase(with type)
+  * functions(.xaml): snack_case
+  * folders: PascalCase
 
 如果RPA程序需要获取客户内部系统的数据，需要客户IT部门提供接口，那么我方需要尽早和客户方IT团队约定接口、参数的命名规则，并同步到文档中，避免双方开发过程中出现因参数命名不一致导致矛盾。
 
