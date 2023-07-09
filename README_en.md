@@ -15,6 +15,9 @@ Catelog
 - [6. Program Design](#6-program-design)
   - [6.1. Flow Chart](#61-flow-chart)
   - [6.2. Naming Rules](#62-naming-rules)
+  - [6.3. Module Division](#63-module-division)
+    - [6.3.1. The Fundamental Principles of Module Division: High Cohesion, Low coupling](#631-the-fundamental-principles-of-module-division-high-cohesion-low-coupling)
+    - [6.3.2. Benefits of Module Division](#632-benefits-of-module-division)
 - [7. License](#7-license)
 
 # 1. Proface
@@ -344,6 +347,28 @@ Here are my naming conversions for reference:
 
 If an RPA program needs to retrieve data from a client's internal system via some APIs provided by the client's IT departments, we should early define the API name and argument rules with the client's IT teams and document them. This will help prevent conflicts in naming conventions during the development phase.
 
+## 6.3. Module Division
+
+Before we proceed with the implementation of the RPA program, to ensure the program has a clear structure and to reduce complexity and debugging efforts, we should plan the modules of the program in a top-down manner.
+
+### 6.3.1. The Fundamental Principles of Module Division: High Cohesion, Low coupling
+
+This means that the functions within a module should all serve the needs of a single objective, and the dependencies between different modules should be kept as minimal and straightforward as possible.
+
+### 6.3.2. Benefits of Module Division
+
+* Enhance the program's maintainability and expandability.
+  * Due to the independence of each module, one layer doesn't need to know how the adjacent layer are implemented, it merely invokes or gets invoked by conventions. Each module simply accomplish its goal in an appropriate manner.
+  * When a module needs modification, as long as the invoking interface remains the same, the modules that call upon it will not be affected, and will not require concurrent modification.
+  * If a module becomes redundant, it can be removed directly.
+* Facilitate unit testing
+  * Issues can be identified and resolved more efficiently in a smaller modules. When an issue is vaguely localized within a large module, or detected at a later stage of the project, the resolution process tends to be more costly. This is why dividing the program into small modules facilitates unit testing and help mitigate potential issues early in the development process.
+* Promote standardization
+  * As previously mentioned, many teams on the vendor side specialize in specific business areas, such as E-commerce, Logistics, Finance, etc. Different projects within these areas often have many common aspects.
+    Therefore, we can standardize the interfaces similar functions and package them into a Library (in UiBot, it's called Command Library; in UiPath, it's called Library, in Encoo, it's called Component Library). New projects can then directly utilize these prepackaged modules from the library.
+* Facilitate work division within a team
+  * When a large project is split into smaller, modular parts, it makes it easier to divide the work among team members. Each individual or subteam can focus on a specific module, promoting parallel development and speeding up the overall project timeline.
+  * This division also aids in accountability as it's clear who is responsible for each module.
 
 # 7. License
 
