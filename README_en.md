@@ -372,7 +372,8 @@ This means that the functions within a module should all serve the needs of a si
 
 ### 6.3.3. Factors in Module Division
 
-* Flow charts, requirement documents that generated in earlier stages of the project.
+* Previous Phase Outputs
+  * Such as flow charts, requirement documents that generated in earlier stages of the project.
 * Functional Areas
   * Divide modules according to distinct functions within the business process. For example, in an email management RPA program, there might be functions like "reading mails", "filtering mails", "sending mails".
     In light of this, we can consider implementing these in different blocks (in UiBot), or in different folders or .xaml files (in UiPath and Encoo).
