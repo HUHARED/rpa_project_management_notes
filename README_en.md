@@ -370,6 +370,28 @@ This means that the functions within a module should all serve the needs of a si
   * When a large project is split into smaller, modular parts, it makes it easier to divide the work among team members. Each individual or subteam can focus on a specific module, promoting parallel development and speeding up the overall project timeline.
   * This division also aids in accountability as it's clear who is responsible for each module.
 
+### 6.3.3. Factors in Module Division
+
+* Flow charts, requirement documents that generated in earlier stages of the project.
+* Functional Areas
+  * Divide modules according to distinct functions within the business process. For example, in an email management RPA program, there might be functions like "reading mails", "filtering mails", "sending mails".
+    In light of this, we can consider implementing these in different blocks (in UiBot), or in different folders or .xaml files (in UiPath and Encoo).
+* Data Types
+  * For instance, an RPA program needs to manipulate some order files with different types, we can put each kind of manipulation for order files to different functions(or .xaml files) or folders.
+* Sequence of Steps
+  * Divide the entire program into a series of modules based on the sequential order of the business process steps.
+* Software
+  * For example, if an RPA program needs to interact with different web pages, client software, databases, and Excel files, we can initially create folders, and then place the respective processes for  each software into the corresponding folders.
+    It's straightforward with some RPA tools that have a built-in folder architecture, like UiPath and Encoo. In UiBot, we can utilize a block that includes some functions as if it were a folder.
+* Module Reusability
+  * Steps that are utilized multiple times should be packaged especially.
+* Module Complexity
+  * The more steps that a module contains, the more necessary it becomes to to divide it into different submodules.
+* Future Requirement Changes
+  * If certain steps associated with a business are likely to change in the future, they should be disigned as a separate modules. This approach allows for easier modifications to adapt to new situations, reducing the need to modify extencice portions of the program.
+* Team Members' Technical Proficiency
+  * When working as a team on a program, it's advisable to avoid using technologies that other team members are unfamiliar with. This ensures that everyone can understand and implement the module designs.
+
 # 7. License
 
 [MIT License](./LICENSE "开源许可证")
