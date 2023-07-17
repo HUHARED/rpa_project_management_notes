@@ -18,6 +18,8 @@ Catelog
   - [6.3. Module Division](#63-module-division)
     - [6.3.1. The Fundamental Principles of Module Division: High Cohesion, Low coupling](#631-the-fundamental-principles-of-module-division-high-cohesion-low-coupling)
     - [6.3.2. Benefits of Module Division](#632-benefits-of-module-division)
+    - [6.3.3. Factors in Module Division](#633-factors-in-module-division)
+    - [6.3.4. Features for Module Division in RPA Tools](#634-features-for-module-division-in-rpa-tools)
 - [7. License](#7-license)
 
 # 1. Proface
@@ -392,6 +394,29 @@ This means that the functions within a module should all serve the needs of a si
   * If certain steps associated with a business are likely to change in the future, they should be disigned as a separate modules. This approach allows for easier modifications to adapt to new situations, reducing the need to modify extencice portions of the program.
 * Team Members' Technical Proficiency
   * When working as a team on a program, it's advisable to avoid using technologies that other team members are unfamiliar with. This ensures that everyone can understand and implement the module designs.
+
+### 6.3.4. Features for Module Division in RPA Tools
+
+RPA Developers can utilize the following features to divide modules into different levels. Features listed earlier are better suit for high-level divisions.
+
+* UiBot
+  * Block
+    * Please note that the functions within a block can be invoked by others blocks.
+      They can be done in the Source Code View: `returnedValue = blockName.functionName(arguments)`
+  * Function (subprocess)
+* UiPath / Encoo
+  * Folders
+  * .xaml
+  * Flow chart / Sequence
+
+### 6.3.5. What a Well-Structured RPA Program Looks Like
+
+In a well-structured RPA program, all blocks (.task files in UiBot, .xaml files in UiPath and Encoo), functions, flow charts, and sequences are "atomized" as much as possible. This means that each module serves a single purpose and contains the fewest possible steps. (If a module contains many steps, it may be worth considering whether it should be divided into several submodules)
+
+This way, we can clearly articulate and understand the varying levels of funcions, from macro to micro, and implement them accordingly.
+
+Moreover, this approach facilitates unit testing and reduces instances where we must execute the entire program from start node just to test a small function. (When we testing a current module, if we require data producted from upstream modules, we should use the UnitTest command in Uibot, or the Mocking feature in UiPath, to generate simulated values)
+
 
 # 7. License
 
