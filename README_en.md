@@ -474,6 +474,27 @@ Naturally, different exceptions require different responses. Here are some facto
 * Some exceptions may require prompt manual intervention. In such case, **notifying** the responsible parties via instant messaging software and email when an exception was caught can be helpful.
 * When an exception occurrs, if some data has been processed, but business rules state that "all or nothing" processing, a **rollback** should be implemented to revert processed data to its original state. This is common in database operations, where placeing all operations within a transaction allows automatic rollback of all operations when an exception occurrs.
 
+### Features of Exception Handling in RPA tools
+
+* UiBot
+
+  * [Try Catch](https://documents.laiye.com/rpa-command-manual/docs/Grammar/TryCatch)
+  * [TryNCatch](https://documents.laiye.com/rpa-command-manual/docs/Grammar/TryNCatch)
+  * Link an Exception Arrow Line to the exception handling block
+
+    * When we generate a Direction Arrow by dragging from a block's edge to another block, the first arrow defines that "next block after the current block completes". If we drag another arrow, an Exception Arrow is created, indicating "where the program should proceed if the current block throws an uncaught exception".
+    * ![1685689045419](image/README/1685689045419.png)
+* UiPath
+
+  * [Try Catch](https://docs.uipath.com/activities/docs/try-catch)
+  * [Retry Scope](https://docs.uipath.com/activities/docs/retry-scope)
+  * [global-exception-handler](https://docs.uipath.com/studio/docs/global-exception-handler)
+* Encoo
+
+  * [Try Catch](https://academy.encoo.com/wiki/Activities/JudgeLoop/Senior/TryCatch.md?uuid=48b2d381-2ebc-4611-85eb-5b6ea87ae5aa)
+  * [Retry](https://academy.encoo.com/zh-cn/wiki/Activities/WorkflowControl/Retry.md?_v=v2020.1&uuid=3a5ca6b3-47d9-4e27-b4a0-91abe47b59bb)
+  * [ErrorHandler.xaml](https://academy.encoo.com/zh-cn/wiki/Studio/process/developProject/TypeOfWorkflow/ErrorHandler.md?_v=v2020.4&uuid=17e7013e-aca2-44e7-92da-ae2879ff6082)
+
 # 7. License
 
 [MIT License](./LICENSE "开源许可证")
