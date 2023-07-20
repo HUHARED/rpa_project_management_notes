@@ -25,6 +25,9 @@ Catelog
     - [6.4.1. Distinguish Exception Types](#641-distinguish-exception-types)
       - [6.4.1.1. Technical Exceptions that Occur at Runtime](#6411-technical-exceptions-that-occur-at-runtime)
       - [6.4.1.2. Business Exceptions Due to Violations of Business Rules](#6412-business-exceptions-due-to-violations-of-business-rules)
+    - [6.4.2. Exception Handling Methods](#642-exception-handling-methods)
+    - [6.4.3. Factors in Exception Handling](#643-factors-in-exception-handling)
+    - [6.4.4. Features of Exception Handling in RPA tools](#644-features-of-exception-handling-in-rpa-tools)
 - [7. License](#7-license)
 
 # 1. Proface
@@ -447,7 +450,7 @@ Since RPA is a technology of business automation, business exceptions refer to s
 * For a reimbursement processing RPA program, a business rule might specify that "if a reimbursement request exceeds $10000, it should be handled manually". Therefore, the RPA program could throw an exception with a clear message, such as "The current request's amount is more than $10000; manual intervention is required."
 * In a form filling RPA program, a business rule might stipulate that certain fields must be filled out. After retrieveing the for's contents, the RPA program checks whether each field is filled. If it encounters an empty field, it throws a customized exception accordingly.
 
-### Exception Handling Methods
+### 6.4.2. Exception Handling Methods
 
 In summary, when an exception was thrown, we can handle it in the following ways:
 
@@ -457,7 +460,7 @@ In summary, when an exception was thrown, we can handle it in the following ways
 * Notify
 * Rollback
 
-### Factors in Exception Handling
+### 6.4.3. Factors in Exception Handling
 
 Naturally, different exceptions require different responses. Here are some factors to consider:
 
@@ -474,7 +477,7 @@ Naturally, different exceptions require different responses. Here are some facto
 * Some exceptions may require prompt manual intervention. In such case, **notifying** the responsible parties via instant messaging software and email when an exception was caught can be helpful.
 * When an exception occurrs, if some data has been processed, but business rules state that "all or nothing" processing, a **rollback** should be implemented to revert processed data to its original state. This is common in database operations, where placeing all operations within a transaction allows automatic rollback of all operations when an exception occurrs.
 
-### Features of Exception Handling in RPA tools
+### 6.4.4. Features of Exception Handling in RPA tools
 
 * UiBot
 
@@ -494,6 +497,7 @@ Naturally, different exceptions require different responses. Here are some facto
   * [Try Catch](https://academy.encoo.com/wiki/Activities/JudgeLoop/Senior/TryCatch.md?uuid=48b2d381-2ebc-4611-85eb-5b6ea87ae5aa)
   * [Retry](https://academy.encoo.com/zh-cn/wiki/Activities/WorkflowControl/Retry.md?_v=v2020.1&uuid=3a5ca6b3-47d9-4e27-b4a0-91abe47b59bb)
   * [ErrorHandler.xaml](https://academy.encoo.com/zh-cn/wiki/Studio/process/developProject/TypeOfWorkflow/ErrorHandler.md?_v=v2020.4&uuid=17e7013e-aca2-44e7-92da-ae2879ff6082)
+
 
 # 7. License
 
