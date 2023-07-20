@@ -20,6 +20,11 @@ Catelog
     - [6.3.2. Benefits of Module Division](#632-benefits-of-module-division)
     - [6.3.3. Factors in Module Division](#633-factors-in-module-division)
     - [6.3.4. Features for Module Division in RPA Tools](#634-features-for-module-division-in-rpa-tools)
+    - [6.3.5. What a Well-Structured RPA Program Looks Like](#635-what-a-well-structured-rpa-program-looks-like)
+  - [6.4. Exception Handling](#64-exception-handling)
+    - [6.4.1. Distinguish Exception Types](#641-distinguish-exception-types)
+      - [6.4.1.1. Technical Exceptions that Occur at Runtime](#6411-technical-exceptions-that-occur-at-runtime)
+      - [6.4.1.2. Business Exceptions Due to Violations of Business Rules](#6412-business-exceptions-due-to-violations-of-business-rules)
 - [7. License](#7-license)
 
 # 1. Proface
@@ -417,6 +422,57 @@ This way, we can clearly articulate and understand the varying levels of funcion
 
 Moreover, this approach facilitates unit testing and reduces instances where we must execute the entire program from start node just to test a small function. (When we testing a current module, if we require data producted from upstream modules, we should use the UnitTest command in Uibot, or the Mocking feature in UiPath, to generate simulated values)
 
+## 6.4. Exception Handling
+
+An RPA program may throw an exception due to network issues, UI changes, and other unexpected events. An robust RPA problem should be able to handle different types of exceptions (errors) using appropriate methods.
+
+### 6.4.1. Distinguish Exception Types
+
+Let's learn about the types of exceptions that we may encounter.
+
+#### 6.4.1.1. Technical Exceptions that Occur at Runtime
+
+The "technical exception" occur when our code is correct, and the program follows the correct business process, yet an error still occurs during execution. Common technical exceptions include:
+
+* An element cannot be found due to slow network speed, interface changes, etc.
+* A value (or a variable, an argument) is null or not be assigned (represented as None in Python, Null in UiBot, UiPath, Encoo, Database), leading to an exception if it's used.
+* Calculate wrrors, for example, try to divide a variable by zero will throw a ZeroDivisionError.
+* And so on.
+
+#### 6.4.1.2. Business Exceptions Due to Violations of Business Rules
+
+Since RPA is a technology of business automation, business exceptions refer to situations that violate established business rules. Here are a few examples:
+
+* In an RPA program designed to review financial risks, a business rule may state that "if the current order's amount exceeds $10,000 and the client's IP address is outside our country", the RPA program should notify the business staff to handle it manually, instead of proceeding with automated processing.
+* For a reimbursement processing RPA program, a business rule might specify that "if a reimbursement request exceeds $10000, it should be handled manually". Therefore, the RPA program could throw an exception with a clear message, such as "The current request's amount is more than $10000; manual intervention is required."
+* In a form filling RPA program, a business rule might stipulate that certain fields must be filled out. After retrieveing the for's contents, the RPA program checks whether each field is filled. If it encounters an empty field, it throws a customized exception accordingly.
+
+### Exception Handling Methods
+
+In summary, when an exception was thrown, we can handle it in the following ways:
+
+* Ignore
+* Retry
+* Record
+* Notify
+* Rollback
+
+### Factors in Exception Handling
+
+Naturally, different exceptions require different responses. Here are some factors to consider:
+
+* If an exception doesn't affect program execution or violate business rules, we can **ignore** it. For example, an RPA program needs to process large amounts of data of the same type. to minitor the process, a message is sent to an engineer via instant messaging software each time a piece of data has been fully  processed. However, there may be occasional failures in sending this message due to slow network speed or frequency limitation. In such case, it's not necessary to send it again, the program could execute the next process immediately.
+* RPA operations can generally be divided into "UI Manipulation" and "Logic Processing".
+  UI Manipulation involves the RPA program interacting with the webpages and applications by mouse and keyboard, while Logic Processing involves calculations and data evaluations.
+  During the process of UI Manipulations, sometimes the RPA program fails to find a target UI element. This could be due to slow network speed preventing the complete loading of a webpage, or unexpected UI elements overlaying the target UI element. In these cases, waiting a few seconds or refreshing the page, then **retrying** the relevant UI Manipulation process could be effective.
+  However, for Logic Processing, as the same contexts will generate the same result, retrying is generally unnecessary.
+* Regardless of their type, all exceptions should be **recorded**.
+
+  * Depending on the requirements, after an exception was recorded, it can be thrown again, either to interrupt the program execution, or be handled by higher-level modules.
+  * UiBot has a mature Source Code View, the code line number will be included when recording exceptions, which is very helpful.
+    As UiPath and Encoo lack a mature Source Code View, giving each Activity or Component a readability name is important for quick problem identification.
+* Some exceptions may require prompt manual intervention. In such case, **notifying** the responsible parties via instant messaging software and email when an exception was caught can be helpful.
+* When an exception occurrs, if some data has been processed, but business rules state that "all or nothing" processing, a **rollback** should be implemented to revert processed data to its original state. This is common in database operations, where placeing all operations within a transaction allows automatic rollback of all operations when an exception occurrs.
 
 # 7. License
 
